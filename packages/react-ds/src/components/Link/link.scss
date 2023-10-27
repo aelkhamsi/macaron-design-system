@@ -1,0 +1,16 @@
+@import '../../styles/main';
+
+.#{$prefix}--lnk {
+  color: $link-color;
+  text-decoration: none;
+
+  &.#{$prefix}--lnk--hovered {
+    cursor: pointer;
+    filter: brightness(120%);
+    text-decoration: underline;
+  }
+
+  &.#{$prefix}--lnk--pressed, &.#{$prefix}--lnk--focused {
+    filter: brightness(120%);
+  }
+}

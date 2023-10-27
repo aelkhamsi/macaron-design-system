@@ -1,0 +1,7 @@
+@function set-text-color-from-background($backgroundColor) {
+  @if(lightness($backgroundColor) > 50) {
+    @return $primary-color;
+  } @else {
+    @return #FFF;
+  }
+}

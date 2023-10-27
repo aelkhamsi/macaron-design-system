@@ -1,0 +1,38 @@
+//////////////
+/// GLOBAL ///
+//////////////
+
+$prefix: "smg";
+
+$primary-color: #009EDE;
+$dark-primary-color: #1A2981;
+$secondary-color: #FFF;
+$disbaled-color: #E5E5E5;
+$link-color: #355FA2;
+$primary-gradient-color-stops: $primary-color, $dark-primary-color;
+
+/////////////
+// BUTTONS //
+/////////////
+$buttons-border-radius: 4px;
+
+////////////
+// INPUTS //
+////////////
+$text-input-height: 35px;
+$text-input-background-color: #F8F9FA;
+$text-input-border-color-blured: #E5E5E5;
+$text-input-border-color-focused: $primary-color;
+$text-input-placeholder-color: #7E7E7E;
+$text-input-border-radius: 2px;
+
+$textarea-height: 70px;
+
+////////////
+// SELECT //
+////////////
+$select-height: 32px;
+$select-background-color: #FFF;
+$select-background-color-hovered: #E5E5E5;
+$select-border-radius: 4px;
+$select-placeholder-color: #CCCCCC;

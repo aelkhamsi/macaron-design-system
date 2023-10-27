@@ -1,0 +1,38 @@
+@import '../../styles/main';
+
+.#{$prefix}--text-input {
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    padding: 0 0 0 8px;
+    border: none;
+    border-radius: $text-input-border-radius;
+    height: $text-input-height;
+    width: 100%;
+    background-color: $text-input-background-color;
+    outline-color: $text-input-border-color-blured;
+    outline-style: solid;
+    outline-width: 1px;
+    
+    font-size: 16px;
+    font-weight: 400;
+    @include set-placeholder-color($text-input-placeholder-color);
+    @include set-transition(0.3s);
+
+    &.#{$prefix}--text-input-focused {
+      outline-color: $text-input-border-color-focused;
+    }
+  }
+
+  .error-message {
+    font-size: 12px;
+    font-weight: 400;
+    color: red;
+    margin-top: 6px;
+  }
+}

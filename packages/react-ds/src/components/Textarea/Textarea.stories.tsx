@@ -1,0 +1,56 @@
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import { Textarea } from './Textarea';
+
+// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+export default {
+  title: 'Textarea',
+  component: Textarea,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as ComponentMeta<typeof Textarea>;
+
+const Template: ComponentStory<typeof Textarea> = (args) => <Textarea {...args} />;
+
+export const Plain = Template.bind({});
+Plain.args = {
+  placeholder: 'Placeholder',
+};
+
+export const WithLabel = Template.bind({});
+WithLabel.args = {
+  placeholder: 'Placeholder',
+  label: 'Label',
+  mandatory: true,
+};
+
+export const WithErrorMessage = Template.bind({});
+WithErrorMessage.args = {
+  placeholder: 'Placeholder',
+  label: 'Label',
+  mandatory: true,
+  errorMessage: "This is an error message",
+};
+
+// export const Numerical = Template.bind({});
+// Numerical.args = {
+//   type: 'number',
+//   placeholder: 'Enter a number',
+//   label: 'Number',
+// };
+
+// export const Password = Template.bind({});
+// Password.args = {
+//   type: 'password',
+//   placeholder: 'Password',
+//   label: 'Enter your password',
+// };
+
+// export const ReadOnly = Template.bind({});
+// ReadOnly.args = {
+//   type: 'text',
+//   placeholder: 'Placeholder',
+//   value: 'Readonly value',
+// };
+

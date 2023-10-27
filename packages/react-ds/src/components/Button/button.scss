@@ -1,0 +1,63 @@
+@import '../../styles/main';
+
+.#{$prefix}--btn {
+  border:none; 
+  outline:none;
+  border-radius: $buttons-border-radius;
+  font-weight: bold;
+  @include set-box-shadow();
+  
+  // SIZES
+  &.#{$prefix}--btn--sm {
+    width: auto;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  &.#{$prefix}--btn--md {
+    width: 257px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  &.#{$prefix}--btn--lg {
+    width: 257px;
+    height: 51px;
+    font-size: 16px;
+  }
+
+  &.#{$prefix}--btn--full-width {
+    width: 100% !important;
+  }
+
+  // COLORS
+  &.#{$prefix}--btn--primary {
+    @include linear-gradient(left, $primary-gradient-color-stops);
+    color: $secondary-color
+  }
+
+  &.#{$prefix}--btn--secondary {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+
+  &.#{$prefix}--btn--outline {
+    background-color: transparent;
+    outline: .5px $primary-color solid;
+    color: $primary-color;
+    box-shadow: none;
+  }
+
+  // STATES
+  &.#{$prefix}--btn--pressed, &.#{$prefix}--btn--hovered, &.#{$prefix}--btn--focused {
+    cursor: pointer;
+    @include darken-background();
+  }
+  
+  &.#{$prefix}--btn--disabled {
+    background-color: $disbaled-color;
+    color: $secondary-color;
+    outline: none;
+    cursor: no-drop !important;
+  }
+}

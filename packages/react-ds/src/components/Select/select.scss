@@ -1,0 +1,66 @@
+@import '../../styles/main';
+
+%option {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: $select-height;
+  background-color: $select-background-color;
+}
+
+.#{$prefix}--select {
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .selected-option {
+    @extend %option;
+    @include set-box-shadow();
+    border-radius: $select-border-radius;
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    #chevron {
+      @include set-transition(0.3s);
+      display: block;
+      transform: rotate(90deg);
+    }
+    
+    .placeholder {
+      color: $select-placeholder-color;
+    }
+  }
+
+  .options {
+    @include set-box-shadow();
+    clip-path: inset(0px -10px -10px -10px);
+    max-height: 112px;
+    overflow: auto;
+
+    &.visible {
+      display: block;
+      // opacity: 1;
+    }
+
+    &.hidden {
+      display: none;
+      // opacity: 0;
+    }
+
+    .option {
+      @extend %option;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $select-background-color-hovered;
+      }
+    }
+  }
+}

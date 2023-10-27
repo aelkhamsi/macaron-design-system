@@ -1,0 +1,56 @@
+@import '../../styles/main';
+
+
+.#{$prefix}--slider {
+  display: flex;
+
+  .label {
+    margin: 2px 0 0 5px;
+    font-size: 14px;
+  }
+
+  .toggler-wrapper {
+    display: block;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+  
+    input[type="checkbox"] {
+      display: none;
+  
+      &:checked + .toggler-slider {
+        background-color: $primary-color;
+  
+        .toggler-knob {
+          left: calc(100% - 18px);
+        }
+      }
+    }
+  
+    .toggler-slider {
+      display: block;
+      background-color: #ccc;
+      position: absolute;
+      border-radius: 100px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+    }
+  
+    .toggler-knob {
+      position: absolute;
+      -webkit-transition: all 300ms ease;
+      transition: all 300ms ease;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      left: 3px;
+      top: 3px;
+      background-color: #fff;
+    }
+  }
+}

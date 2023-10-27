@@ -1,0 +1,11 @@
+@import '../../styles/main';
+
+.#{$prefix}--checkbox {
+  input[type="checkbox"] {
+  }
+
+  .label {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+}

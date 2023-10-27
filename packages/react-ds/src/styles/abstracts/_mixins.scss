@@ -1,0 +1,38 @@
+@mixin linear-gradient($direction, $color-stops) { 
+  background: -webkit-linear-gradient($direction, $color-stops);
+  background: -moz-linear-gradient($direction, $color-stops);
+  background: -o-linear-gradient($direction, $color-stops);
+  background: linear-gradient($direction, $color-stops);  
+}
+
+@mixin set-transition($duration) {
+  -webkit-transition: all $duration ease;
+  -moz-transition: all $duration ease;
+  -o-transition: all $duration ease;
+  -ms-transition: all $duration ease;
+  transition: all $duration ease;
+}
+
+@mixin darken-background() {
+  -webkit-filter: brightness(95%);
+  @include set-transition(0.3s);
+}
+
+@mixin set-box-shadow() {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);
+}
+
+@mixin set-placeholder-color($color) {
+  &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color;
+    opacity: 1; /* Firefox */
+  }
+  
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color;
+  }
+  
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color;
+  }
+}
